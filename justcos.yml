@@ -12,9 +12,6 @@ onboot:
   - name: dhcpcd
     image: linuxkit/dhcpcd:v0.6
     command: ["/sbin/dhcpcd", "--nobackground", "-f", "/dhcpcd.conf", "-1"]
-  - name: modprobe
-    image: linuxkit/modprobe:v0.6
-    command: ["modprobe", "-a", "uhci_hcd"]
 services:
   - name: getty
     image: linuxkit/getty:v0.6
